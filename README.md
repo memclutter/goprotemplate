@@ -1,3 +1,2 @@
 # goprotemplate
-
-Golang project template.
+Yet another golang project template
