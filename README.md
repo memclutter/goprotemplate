@@ -1,0 +1,3 @@
+# goprotemplate
+
+Golang project template.
