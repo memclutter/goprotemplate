@@ -1,0 +1,21 @@
+version: '3.9'
+volumes:
+  db_data: {}
+networks:
+  backend:
+    name: goprotemplate_backend
+    driver: bridge
+services:
+  db:
+    image: 'bitnami/postgresql:14.4.0-debian-11-r3'
+    expose:
+      - "5432"
+    networks:
+      - backend
+    volumes:
+      - "db_data:/bitnami/postgresql"
+    environment:
+      ALLOW_EMPTY_PASSWORD: 'no'
+      POSTGRESQL_USERNAME: 'goprotemplate'
+      POSTGRESQL_PASSWORD: 'goprotemplate'
+      POSTGRESQL_DATABASE: 'goprotemplate'

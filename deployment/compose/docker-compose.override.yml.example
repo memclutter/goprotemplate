@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  db:
+    ports:
+      - "5432:5432"
+    environment:
+      BITNAMI_DEBUG: 'yes'
